@@ -16,9 +16,11 @@ Airport Challenge in PHP
 Purpose:
 ------
 Personal learning repo to upskill in PHP. 
-Note this is a translation of a popular software engineering challenge. See the following repo for an earlier attempt in the [Ruby programming language](https://github.com/LinTrieu/airport_challenge). 
 
-Status / Progress
+Note this is a translation of a popular software engineering challenge. See the following repo for a earlier attempt
+ at the [Airport Challenge in Ruby](https://github.com/LinTrieu/airport_challenge). 
+
+Status 
 ------
 
 * [ ] x
@@ -36,26 +38,30 @@ Here are the user stories that we worked out in collaboration with the client:
 As an air traffic controller 
 So I can get passengers to a destination 
 I want to instruct a plane to land at an airport
-
+```
+```
 As an air traffic controller 
 So I can get passengers on the way to their destination 
 I want to instruct a plane to take off from an airport and confirm that it is no longer in the airport
-
+```
+```
 As an air traffic controller 
 To ensure safety 
 I want to prevent takeoff when weather is stormy 
-
+```
+```
 As an air traffic controller 
 To ensure safety 
 I want to prevent landing when weather is stormy 
-
+```
+```
 As an air traffic controller 
 To ensure safety 
 I want to prevent landing when the airport is full 
-
+```
+```
 As the system designer
 So that the software can be used for many different airports
 I would like a default airport capacity that can be overridden as appropriate
 ```
-
------
+```
