@@ -5,7 +5,7 @@ class Plane
 {
     function testing() :string
     {
-        return “Hello, this is the Plane class talking”;
+        return "Hello, this is the Plane class talking!";
     }
 
     function isWorking() :bool
