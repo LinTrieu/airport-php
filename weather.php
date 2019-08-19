@@ -10,7 +10,9 @@ class Weather
 
     function random_outlook()
     {
-
+        $outlook = array("stormy", "sunny", "sunny", "stormy");
+        $rand_index = array_rand($outlook);
+        return $outlook[$rand_index];
     }
 
     function stormy()
@@ -18,3 +20,5 @@ class Weather
 
     }
 }
+
+echo Weather::random_outlook();
