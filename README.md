@@ -15,9 +15,8 @@ Airport Challenge in PHP
 
 Purpose:
 ------
-Personal learning repo to upskill in PHP
-
-
+Personal learning repo to upskill in PHP. 
+Note this is a translation of a popular software engineering challenge. See the following repo for an earlier attempt in the [Ruby programming language](https://github.com/LinTrieu/airport_challenge). 
 
 Status / Progress
 ------
@@ -57,3 +56,6 @@ I want to prevent landing when the airport is full
 As the system designer
 So that the software can be used for many different airports
 I would like a default airport capacity that can be overridden as appropriate
+```
+
+-----
