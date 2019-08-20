@@ -18,14 +18,20 @@ class Weather
         return $this->forecast;
     }
 
-//    function stormy() :bool
-//    {
-//        $this->random_outlook();
-//        if (self::forecast === "stormy")
-//        {
-//            return true;
-//        }
-//    }
+    function isStormy() :bool
+    {
+        echo "Weather Forecast: " . $this->random_outlook() . "\n";
+        if ($this->forecast === "stormy")
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        };
+    }
 }
+
 $monday = new Weather;
-echo $monday->random_outlook();
+$monday->isStormy();
+
