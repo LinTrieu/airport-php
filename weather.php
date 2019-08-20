@@ -3,22 +3,29 @@ declare(strict_types=1);
 
 class Weather
 {
-    function __construct()
-    {
+    private $forecast;
 
+    public function __construct()
+    {
+        $this->forecast = "sunny";
     }
 
-    function random_outlook()
+    function random_outlook() :string
     {
-        $outlook = array("stormy", "sunny", "sunny", "stormy");
+        $outlook = array("stormy", "stormy", "sunny", "sunny");
         $rand_index = array_rand($outlook);
-        return $outlook[$rand_index];
+        $this->forecast = $outlook[$rand_index];
+        return $this->forecast;
     }
 
-    function stormy()
-    {
-
-    }
+//    function stormy() :bool
+//    {
+//        $this->random_outlook();
+//        if (self::forecast === "stormy")
+//        {
+//            return true;
+//        }
+//    }
 }
-
-echo Weather::random_outlook();
+$monday = new Weather;
+echo $monday->random_outlook();
