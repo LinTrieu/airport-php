@@ -6,9 +6,9 @@ class Hanger
 {
     const DEFAULT_CAPACITY = 20;
 
-    function __construct($weather, $capacity = self::DEFAULT_CAPACITY)
+    function __construct(Weather $weather, $capacity = self::DEFAULT_CAPACITY)
     {
-        $this->weather = new Weather;
+        $this->weather = $weather;
         $this->capacity = $capacity;
         $this->planes = [];
     }
@@ -19,10 +19,10 @@ class Hanger
             if ($this->isFull()) {
                 throw new Exception ("Plane cannot land. Hanger is full");
             }
-//            elseif ($this->weather->isStormy())
-//            {
-//                throw new Exception("Plane cannot land due to stormy weather");
-//            }
+            elseif ($this->weather->isStormy())
+            {
+                throw new Exception("Plane cannot land due to stormy weather");
+            }
             array_push($this->planes, $plane);
             return $this;
         }
