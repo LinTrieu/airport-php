@@ -12,7 +12,7 @@ class Weather
 
     function random_outlook() :string
     {
-        $outlook = array("stormy", "stormy", "sunny", "sunny");
+        $outlook = array("stormy", "sunny", "sunny", "sunny");
         $rand_index = array_rand($outlook);
         $this->forecast = $outlook[$rand_index];
         return $this->forecast;
@@ -20,7 +20,7 @@ class Weather
 
     function isStormy() :bool
     {
-        echo "Weather Forecast: " . $this->random_outlook() . "\n";
+        echo "Woohoo! Plane has landed in hanger, the weather is: " . $this->random_outlook() . "\n";
         if ($this->forecast === "stormy")
         {
             return true;
