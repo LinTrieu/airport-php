@@ -19,6 +19,10 @@ class Hanger
             if ($this->isFull()) {
                 throw new Exception ("Airport hanger is full");
             }
+//            elseif ($this->weather->isStormy())
+//            {
+//                throw new Exception("Plane cannot land due to stormy weather");
+//            }
             array_push($this->planes, $plane);
             return $this;
         }
@@ -29,8 +33,6 @@ class Hanger
         }
     }
 
-    //        throw new Exception("Plane cannot land due to stormy weather");
-
     function planeTakeoff()
     {
 
@@ -38,7 +40,12 @@ class Hanger
 
     function isFull()
     {
-        return false;
+        if (count($this->planes) >= $this->capacity) {
+            return true;
+        } else
+        {
+            return false;
+        }
     }
 
     function isEmpty()
