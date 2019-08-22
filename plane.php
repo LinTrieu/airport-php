@@ -14,5 +14,5 @@ class Plane
     }
 }
 
-echo Plane::testing();
-echo Plane::isWorking();
+//echo Plane::testing();
+//echo Plane::isWorking();

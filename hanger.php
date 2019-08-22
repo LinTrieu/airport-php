@@ -1,5 +1,6 @@
 <?php
 include ("weather.php");
+include ("plane.php");
 
 class Hanger
 {
@@ -12,11 +13,13 @@ class Hanger
         $this->planes = array();
     }
 
-    function land($plane)
+    function land(Plane $plane)
     {
-
+        
         array_push($this->planes, $plane);
+        return $this;
 //        throw new Exception("Plane cannot land due to stormy weather");
+
     }
 
     function planeTakeoff()
