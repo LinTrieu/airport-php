@@ -31,7 +31,7 @@ class Weather
         };
     }
 }
-
-$monday = new Weather;
-$monday->isStormy();
-
+//
+//$monday = new Weather;
+//$monday->isStormy();
+//
