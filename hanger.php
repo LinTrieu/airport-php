@@ -17,7 +17,7 @@ class Hanger
     {
         try {
             if ($this->isFull()) {
-                throw new Exception ("Airport hanger is full");
+                throw new Exception ("Plane cannot land. Hanger is full");
             }
 //            elseif ($this->weather->isStormy())
 //            {
@@ -35,10 +35,21 @@ class Hanger
 
     function planeTakeoff()
     {
-
+        try {
+            if ($this->isEmpty())
+            {
+                throw new Exception ("No planes available. Hanger is empty");
+            }
+            array_pop($this->planes);
+            return $this;
+        }
+        catch (Exception $e)
+        {
+            echo $e->getMessage();
+        }
     }
 
-    function isFull()
+    function isFull() :bool
     {
         if (count($this->planes) >= $this->capacity) {
             return true;
@@ -48,9 +59,16 @@ class Hanger
         }
     }
 
-    function isEmpty()
+    function isEmpty() :bool
     {
-
+        if (empty($this->planes))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
 
