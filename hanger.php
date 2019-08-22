@@ -8,19 +8,27 @@ class Hanger
 
     function __construct($weather, $capacity = self::DEFAULT_CAPACITY)
     {
-        $this->weather = $weather;
+        $this->weather = new Weather;
         $this->capacity = $capacity;
-        $this->planes = array();
+        $this->planes = [];
     }
 
     function land(Plane $plane)
     {
-        
-        array_push($this->planes, $plane);
-        return $this;
-//        throw new Exception("Plane cannot land due to stormy weather");
-
+        try {
+            if ($this->isFull()) {
+                throw new Exception ("Airport hanger is full");
+            }
+            array_push($this->planes, $plane);
+            return $this;
+        }
+        catch (Exception $e)
+        {
+            echo $e->getMessage();
+        }
     }
+
+    //        throw new Exception("Plane cannot land due to stormy weather");
 
     function planeTakeoff()
     {
@@ -29,7 +37,7 @@ class Hanger
 
     function isFull()
     {
-
+        return false;
     }
 
     function isEmpty()
@@ -37,3 +45,11 @@ class Hanger
 
     }
 }
+
+//$terminal_one = new Hanger("sunny");
+//$ryanair = new Plane;
+//$easyjet = new Plane;
+//$terminal_one->land($ryanair);
+//$terminal_one->land($easyjet);
+////var_dump($terminal_one->planes);
+//var_dump("\n ----------");
