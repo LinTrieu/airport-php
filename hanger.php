@@ -30,11 +30,14 @@ class Hanger
         }
         catch (Exception $e)
         {
-//            echo $e->getMessage();
-            throw $e;
+            echo $e->getMessage();
+//            throw $e;
         }
     }
 
+    // TODO: refactor so that a specific instance object of the Plane class has to be passed into planeTakeoff method
+    // as a parameter
+    // E.G. takeoff(Plane $plane)
     function planeTakeoff()
     {
         try {
@@ -53,24 +56,28 @@ class Hanger
 
     function isFull() :bool
     {
-        if (count($this->planes) >= $this->capacity) {
-            return true;
-        } else
-        {
-            return false;
-        }
+        return (count($this->planes) >= $this->capacity);
+//
+//        if (count($this->planes) >= $this->capacity) {
+//            return true;
+//        } else
+//        {
+//            return false;
+//        }
     }
 
     function isEmpty() :bool
     {
-        if (empty($this->planes))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return empty($this->planes);
+
+//        if (empty($this->planes))
+//        {
+//            return true;
+//        }
+//        else
+//        {
+//            return false;
+//        }
     }
 }
 

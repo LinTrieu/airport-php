@@ -10,9 +10,8 @@ class Plane
 
     function isWorking() :bool
     {
-        return true;
+    return true;
     }
 }
 
 //echo Plane::testing();
-//echo Plane::isWorking();

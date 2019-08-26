@@ -20,15 +20,16 @@ class Weather
 
     function isStormy() :bool
     {
-        echo "Woohoo! Plane has landed in hanger, the weather is: " . $this->random_outlook() . "\n";
-        if ($this->forecast === "stormy")
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        };
+        echo "The weather outlook is: " . $this->random_outlook() . "\n";
+        return ($this->forecast === "stormy");
+//        if ($this->forecast === "stormy")
+//        {
+//            return true;
+//        }
+//        else
+//        {
+//            return false;
+//        };
     }
 }
 //

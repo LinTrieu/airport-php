@@ -23,8 +23,11 @@ Note this is a translation of a popular software engineering challenge. See the 
 Status 
 ------
 
-* [ ] Code business logic and all user stories into three airport classes: plane, hanger, weather 
-* [ ] Strict typing for hanger (how to strictly type for multiple potential returns e.g. iterable & callable )
+* [ ] Code business logic and user stories into three airport classes: plane, hanger, weather 
+* [ ] Fix Exception Try Catch code in Hanger class
+* [ ] Prevent duplicate instance objects (plane instance object - $ryanair) from being able to land twice in the same
+ Hanger (hanger instance object - $terminal_one)
+* [ ] Add strict typing functionality for the Hanger class (i.e. how to strictly type for multiple potential e.g'return' actions; iterable; callable)
 * [ ] Add PHP xUnit test framework
 * [ ] Implement unit tests for 90% code coverage
 
