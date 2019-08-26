@@ -23,9 +23,10 @@ Note this is a translation of a popular software engineering challenge. See the 
 Status 
 ------
 
-* [ ] x
-* [ ] y
-* [ ] z
+* [ ] Code business logic and all user stories into three airport classes: plane, hanger, weather 
+* [ ] Strict typing for hanger (how to strictly type for multiple potential returns e.g. iterable & callable )
+* [ ] Add PHP xUnit test framework
+* [ ] Implement unit tests for 90% code coverage
 
 User stories
 -----

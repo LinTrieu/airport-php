@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 include ("weather.php");
 include ("plane.php");
 
@@ -28,8 +30,8 @@ class Hanger
         }
         catch (Exception $e)
         {
-            echo $e->getMessage();
-//            throw $e;
+//            echo $e->getMessage();
+            throw $e;
         }
     }
 
