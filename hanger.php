@@ -57,27 +57,11 @@ class Hanger
     function isFull() :bool
     {
         return (count($this->planes) >= $this->capacity);
-//
-//        if (count($this->planes) >= $this->capacity) {
-//            return true;
-//        } else
-//        {
-//            return false;
-//        }
     }
 
     function isEmpty() :bool
     {
         return empty($this->planes);
-
-//        if (empty($this->planes))
-//        {
-//            return true;
-//        }
-//        else
-//        {
-//            return false;
-//        }
     }
 }
 

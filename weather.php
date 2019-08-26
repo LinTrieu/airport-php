@@ -22,14 +22,6 @@ class Weather
     {
         echo "The weather outlook is: " . $this->random_outlook() . "\n";
         return ($this->forecast === "stormy");
-//        if ($this->forecast === "stormy")
-//        {
-//            return true;
-//        }
-//        else
-//        {
-//            return false;
-//        };
     }
 }
 //
