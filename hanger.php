@@ -37,16 +37,18 @@ class Hanger
 
     // TODO: refactor so that a specific instance object of the Plane class has to be passed into planeTakeoff method
     // as a parameter
-    // E.G. takeoff(Plane $plane)
-    function planeTakeoff()
+    function takeoff(Plane $plane)
     {
         try {
-            if ($this->isEmpty())
-            {
+            if ($this->isEmpty()) {
                 throw new Exception ("No planes available. Hanger is empty");
             }
-            array_pop($this->planes);
-            return $this;
+            if (($key = array_search($plane, $this->planes)) != false)
+            {
+                unset($this->planes[$key]);
+            }
+//            array_pop($this->planes);
+//            return $this;
         }
         catch (Exception $e)
         {
@@ -65,10 +67,16 @@ class Hanger
     }
 }
 
-//$terminal_one = new Hanger("sunny");
+//$thursday = new Weather;
+//$terminal_one = new Hanger($thursday, 2);
 //$ryanair = new Plane;
 //$easyjet = new Plane;
+//$ba = new Plane;
 //$terminal_one->land($ryanair);
 //$terminal_one->land($easyjet);
-////var_dump($terminal_one->planes);
+//var_dump('----------');
+//var_dump($terminal_one->planes);
 //var_dump("\n ----------");
+//$terminal_one->land($ba);
+//var_dump("\n ----------");
+//$terminal_one->planeTakeoff();

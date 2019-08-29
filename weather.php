@@ -20,7 +20,6 @@ class Weather
 
     function isStormy() :bool
     {
-        echo "The weather outlook is: " . $this->random_outlook() . "\n";
         return ($this->forecast === "stormy");
     }
 }
