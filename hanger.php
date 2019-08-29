@@ -39,16 +39,17 @@ class Hanger
     // as a parameter
     function takeoff(Plane $plane)
     {
-        try {
+        try
+        {
             if ($this->isEmpty()) {
                 throw new Exception ("No planes available. Hanger is empty");
             }
             if (($key = array_search($plane, $this->planes)) != false)
             {
                 unset($this->planes[$key]);
+                return $this;
             }
 //            array_pop($this->planes);
-//            return $this;
         }
         catch (Exception $e)
         {
@@ -75,8 +76,4 @@ class Hanger
 //$terminal_one->land($ryanair);
 //$terminal_one->land($easyjet);
 //var_dump('----------');
-//var_dump($terminal_one->planes);
-//var_dump("\n ----------");
-//$terminal_one->land($ba);
-//var_dump("\n ----------");
-//$terminal_one->planeTakeoff();
+//$terminal
