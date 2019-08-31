@@ -15,6 +15,7 @@ class Hanger
         $this->planes = [];
     }
 
+    // TODO: fix the try catch exception error. the catch is not catching two throws per testing?
     function land(Plane $plane)
     {
         try {
@@ -34,8 +35,7 @@ class Hanger
         }
     }
 
-    // TODO: refactor so that a specific instance object of the Plane class has to be passed into planeTakeoff method
-    // as a parameter
+    // TODO: refactor so that a specific instance of Plane class has to be passed into takeoff method
     function takeoff(Plane $plane)
     {
         try
@@ -43,12 +43,11 @@ class Hanger
             if ($this->isEmpty()) {
                 throw new Exception ("No planes available. Hanger is empty");
             }
-            if (($key = array_search($plane, $this->planes)) != false)
+            if (($key = array_search($plane, $this->planes)) !== false)
             {
                 unset($this->planes[$key]);
-                return $this;
             }
-//            array_pop($this->planes);
+            return $this;
         }
         catch (Exception $e)
         {
