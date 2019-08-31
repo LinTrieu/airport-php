@@ -31,7 +31,6 @@ class Hanger
         catch (Exception $e)
         {
             echo $e->getMessage();
-//            throw $e;
         }
     }
 
@@ -68,13 +67,13 @@ class Hanger
     }
 }
 
-$thursday = new Weather;
-$terminal_one = new Hanger($thursday, 2);
-$ryanair = new Plane;
-$easyjet = new Plane;
-$ba = new Plane;
-$terminal_one->land($ryanair);
-$terminal_one->land($easyjet);
-$terminal_one->takeoff($ryanair);
-var_dump('----------');
-print_r($terminal_one->planes);
+//$thursday = new Weather;
+//$terminal_one = new Hanger($thursday, 2);
+//$ryanair = new Plane;
+//$easyjet = new Plane;
+//$ba = new Plane;
+//$terminal_one->land($ryanair);
+//$terminal_one->land($easyjet);
+//$terminal_one->takeoff($ryanair);
+//var_dump('----------');
+//print_r($terminal_one->planes);
