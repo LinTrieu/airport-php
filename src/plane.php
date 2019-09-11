@@ -15,5 +15,3 @@ class Plane
     return true;
     }
 }
-
-//echo Plane::testing();
