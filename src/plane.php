@@ -5,13 +5,13 @@ namespace Airport;
 
 class Plane
 {
-    function testing() :string
+    public function testing() :string
     {
         return "Hello, this is the Plane class talking!";
     }
 
-    function isWorking() :bool
+    public function isWorking() :bool
     {
-    return true;
+        return true;
     }
 }
