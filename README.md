@@ -25,13 +25,14 @@ Progress & to-do items
 
 * [x] Add PHPUnit test framework
         (Guidance: https://www.startutorial.com/articles/view/phpunit-beginner-part-1-get-started)
-* [ ] Create PHPUnit tests for 90% code coverage of airport challenge
+* [ ] Create PHPUnit tests for 90% code coverage of basic business logic
 * [ ] Code business logic and user stories into three airport classes: plane, hanger, weather 
     * [ ] Fix Try Catch exception code in Hanger class->land method
     * [ ] Prevent duplicate instance objects (plane instance object - $ryanair) from being able to land in the same
      Hanger (hanger instance object - $terminal_one) twice
     * [ ] Add strict typing functionality for the Hanger class (i.e. how to strictly type for multiple potential
      'return' actions; e.g. iterable; callable)
+* [ ] Implement mock objects and stubs in PHPUnit testing  
 
 User stories
 -----
