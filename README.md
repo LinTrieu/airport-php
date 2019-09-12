@@ -23,10 +23,9 @@ Note this is a translation of a popular software engineering challenge. See the 
 Progress & to-do items 
 ------
 
-* [ ] Add PHP xUnit testing framework for Airport challenge
-* [ ] ADD EXAMPLE PHPUNIT TESTING FOR CALCULATOR CLASS ON TUTORIAL 
-        https://www.startutorial.com/articles/view/phpunit-beginner-part-1-get-started
-* [ ] Create PHPunit tests for 90% code coverage
+* [x] Add PHPUnit test framework
+        (Guidance: https://www.startutorial.com/articles/view/phpunit-beginner-part-1-get-started)
+* [ ] Create PHPUnit tests for 90% code coverage of airport challenge
 * [ ] Code business logic and user stories into three airport classes: plane, hanger, weather 
     * [ ] Fix Try Catch exception code in Hanger class->land method
     * [ ] Prevent duplicate instance objects (plane instance object - $ryanair) from being able to land in the same
