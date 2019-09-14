@@ -5,7 +5,7 @@ namespace Airport;
 
 class Hanger
 {
-    const DEFAULT_CAPACITY = 20;
+    const DEFAULT_CAPACITY = 10;
 
     function __construct(Weather $weather, $capacity = self::DEFAULT_CAPACITY)
     {

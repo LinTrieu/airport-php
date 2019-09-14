@@ -10,10 +10,7 @@ class planeTest extends TestCase
     public function testPlaneCanBeInstantiated()
     {
         $ba = new Plane();
-        $this->assertInstanceOf(
-            Plane::class,
-            $ba
-        );
+        $this->assertInstanceOf(Plane::class, $ba);
     }
 
     public function testPlaneIsWorkingReturnsTrue()

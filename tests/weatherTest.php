@@ -19,7 +19,7 @@ class weatherTest extends TestCase
     }
 
 
-//    public function testWeatherHasAForecast()
+//    public function testWeatherHasAForecastByDefault()
 //    {
 //        $monday = new Weather();
 //        $this->assert($monday->forecast());
