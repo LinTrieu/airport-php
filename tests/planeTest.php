@@ -4,7 +4,8 @@ use PHPUnit\Framework\TestCase;
 
 class planeTest extends TestCase
 {
-    private $plane;
+    private $ba;
+    private $ryanair;
 
     public function testPlaneCanBeInstantiated()
     {
@@ -13,5 +14,11 @@ class planeTest extends TestCase
             Plane::class,
             $ba
         );
+    }
+
+    public function testPlaneIsWorkingReturnsTrue()
+    {
+        $ryanair = new Plane();
+        $this->assertTrue($ryanair->isWorking());
     }
 }
