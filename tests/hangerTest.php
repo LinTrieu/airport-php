@@ -12,4 +12,9 @@ class hangerTest extends TestCase
         $this->assertInstanceOf(Hanger::class, $terminal_one);
     }
 
+    public function testHangerIsFullAtCapacity()
+    {}
+
+    public function testHangerIsEmptyWhenNoPlanes()
+    {}
 }
